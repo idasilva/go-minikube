@@ -1,0 +1,18 @@
+version: "3.0"
+services:
+  #db:
+    #image: mysql
+    #environment:
+      #- MYSQL_DATABASE=loja
+      #- MYSQL_USER=root
+      #- MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    #volumes:
+      #- /home/idasilva/go-work/src/github.com/idasilva/projeto/volume_mysql:/var/lib/mysql
+
+  app:
+    image: minikube-helloword:1.0
+    ports:
+      - 8080:8080
+    #depends_on:
+     # - db
+
