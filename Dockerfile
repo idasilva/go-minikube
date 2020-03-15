@@ -1,8 +1,9 @@
-FROM golang:latest as builder
+FROM golang:1.13 as builder
 RUN mkdir /build
 ADD . /build/
 WORKDIR /build
-RUN go build -o main .
+RUN go get github.com/gorilla/mux && \
+go build -o main .
 FROM alpine
 RUN adduser -S -D -H -h /app appuser
 USER appuser

@@ -12,8 +12,8 @@ spec:
         app: aplicacao-pod
     spec:
       containers:
-        - name: container-minikube-helloword
-          image: idasilva/minikube-helloword:1.0
+        - name: container-minikube-helloworld
+          image: idasilva/minikube-helloworld:2.0
           ports:
-            - containerPort: 80
+            - containerPort: 8080
 
